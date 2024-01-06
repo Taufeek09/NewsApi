@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import NewsItem from './components/NewsItem';
+import NewsItem from './NewsItem';
 
 export class News extends Component {
   render() {
