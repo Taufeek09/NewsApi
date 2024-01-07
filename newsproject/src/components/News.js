@@ -112,29 +112,7 @@ export class News extends Component {
           content:
             "38\r\n<ul><li>\r\n United Launch Alliance's first Vulcan rocket prepares to emerge from the Vertical Integration Facility at Cape Canaveral Space Force Station in Florida. \r\n</li><li>\r\n ULA's fully stack… [+7957 chars]",
         },
-        {
-          source: { id: "axios", name: "Axios" },
-          author: "Axios",
-          title:
-            "Navajo Nation fights sending human remains to the moon - Axios",
-          description: null,
-          url: "https://www.axios.com/2024/01/05/navajo-nation-human-remains-moon-sacred",
-          urlToImage: null,
-          publishedAt: "2024-01-06T01:11:08Z",
-          content: null,
-        },
-        {
-          source: { id: "bloomberg", name: "Bloomberg" },
-          author: null,
-          title:
-            "Ackman Wants Plagiarism Checks on MIT Faculty After Wife Accused - Bloomberg",
-          description: null,
-          url: "https://www.bloomberg.com/news/articles/2024-01-05/ackman-wants-plagiarism-checks-on-mit-faculty-after-wife-accused",
-          urlToImage: null,
-          publishedAt: "2024-01-06T00:56:15Z",
-          content:
-            "To continue, please click the box below to let us know you're not a robot.",
-        },
+        
         {
           source: { id: "entertainment-weekly", name: "Entertainment Weekly" },
           author: "https://www.facebook.com/entertainmentweekly",
@@ -294,14 +272,16 @@ export class News extends Component {
           {this.state.articles.map((element)=>{
             return <div className="col-md-4 " key={element.url}>
               <NewsItem
-                title={element.title.slice(0 , 38)}
-                discripation={element.description}
+                title={element.title.slice(0, 40)}
+                discripation={element.description.slice(0,80)}
                 imgUrl={element.urlToImage}
                 newsUrl ={element.url}/>
             </div>
           })}
           </div>
         </div>
+       
+        
       </>
     );
   }
